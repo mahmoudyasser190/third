@@ -1,0 +1,72 @@
+name: alphabet
+description: A new Flutter project.
+publish_to: 'none'
+
+version: 1.1.0+2
+
+environment:
+  sdk: '>=3.1.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  get: ^4.6.6
+  get_storage: ^2.1.1
+  audioplayers: ^5.2.0
+  confetti: ^0.7.0
+  flutter_svg: ^2.0.7
+  flutter_animate: ^4.2.0+1
+  window_manager: ^0.3.7
+  game_ui:
+    git:
+      url: "https://github.com/mikeamir/game_ui"
+      ref: "4f1f445"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  msix: ^3.16.4
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/
+    - assets/animals/
+    - assets/shapes/
+    - assets/audio/lessons/
+    - assets/audio/effects/
+    - assets/audio/music/
+
+  fonts:
+    - family: Digitalt
+      fonts:
+        - asset: assets/fonts/Digitalt.ttf
+    - family: Quicksand Dash
+      fonts:
+        - asset: assets/fonts/Quicksand_Dash.otf
+
+msix_config:
+  display_name: Numbers
+  publisher_display_name: Numbers
+  identity_name: com.learning.numbers
+  msix_version: 1.1.0.0
+  logo_path: "assets/windows_logo.png"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/mobile_logo.png"
+  windows:
+    generate: true
+    image_path: "assets/windows_logo.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  linux:
+    generate: true
+    image_path: "assets/windows_logo.png"
